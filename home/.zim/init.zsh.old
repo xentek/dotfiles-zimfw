@@ -7,7 +7,7 @@ source /Users/xentek/.zim/modules/input/init.zsh
 source /Users/xentek/.zim/modules/termtitle/init.zsh
 source /Users/xentek/.zim/modules/utility/init.zsh
 source /Users/xentek/.zim/modules/duration-info/init.zsh
-source /Users/xentek/.zim/modules/asciiship/asciiship.zsh-theme
+source /Users/xentek/.zim/modules/steeef/steeef.zsh-theme
 source /Users/xentek/.zim/modules/zsh-completions/zsh-completions.plugin.zsh
 source /Users/xentek/.zim/modules/completion/init.zsh
 source /Users/xentek/.zim/modules/zsh-autosuggestions/zsh-autosuggestions.zsh
