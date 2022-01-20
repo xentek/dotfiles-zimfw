@@ -2,7 +2,7 @@
 # -------
 # Modules
 # -------
-
+bindkey -v
 # Sets sane Zsh built-in environment options.
 zmodule environment
 # Provides handy git aliases and functions.
