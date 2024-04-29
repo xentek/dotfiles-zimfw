@@ -161,3 +161,6 @@ unset __conda_setup
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/nomad nomad
+
+# added by dotfiles-xenrc
+[ -f ${HOME}/.xenrc.sh ] && source ${HOME}/.xenrc.sh
