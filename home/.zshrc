@@ -19,10 +19,10 @@ setopt HIST_IGNORE_ALL_DUPS
 #
 
 # Set editor default keymap to emacs (`-e`) or vi (`-v`)
-bindkey -e
+bindkey -v
 
 # Prompt for spelling correction of commands.
-#setopt CORRECT
+setopt CORRECT
 
 # Customize spelling correction prompt.
 #SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
@@ -128,39 +128,12 @@ bindkey -M vicmd 'j' history-substring-search-down
 : ${UNAME=$(uname)}
 : ${HOSTFILE=$HOME/.ssh/known_hosts}
 
-# brew autocomplete
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
-
 # terminal options
 set -o notify # notify of bg job completion immediately
 umask 0022 # dirs will be 775, files 664
 ulimit -n 1024
 
-# add customizations to ~/.localrc
-# these customizations aren't tracked by git
-# see github.com/xentek/dotfiles-xenrc for a way
-# to cleanly add trackable custom config
-[ -f ${HOME}/.localrc ] && source ${HOME}/.localrc
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# add customizations to ~/.profile
+[ -f ${HOME}/.profile ] && source ${HOME}/.profile
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/nomad nomad
-
-# added by dotfiles-xenrc
-[ -f ${HOME}/.xenrc.sh ] && source ${HOME}/.xenrc.sh
