@@ -7,4 +7,3 @@
 skip_global_compinit=1
 : ${ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim}
 # }}} End configuration added by Zim install
-. "$HOME/.cargo/env"

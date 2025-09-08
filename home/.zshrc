@@ -133,7 +133,8 @@ set -o notify # notify of bg job completion immediately
 umask 0022 # dirs will be 775, files 664
 ulimit -n 1024
 
-# add customizations to ~/.profile
-[ -f ${HOME}/.profile ] && source ${HOME}/.profile
 
 autoload -U +X bashcompinit && bashcompinit
+
+# add customizations to ~/.profile
+[ -f ${HOME}/.profile ] && source ${HOME}/.profile
